@@ -3,6 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: sans-serif;
+  background: hsl(55, 73%, 92%);
+}
+
+h1,h5 {
+  font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 .main-wrapper {
   display: grid;
@@ -17,9 +27,60 @@
   gap: 30px;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
 }
 
 .plant {
   max-height:150px;
   max-width: 100%;
+}
+
+.jar{
+  text-align: center;
+  &__title {
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 10px;
+  }
+  &__walls {
+    height: 80%;
+    width: 60%;
+    background: #d1e1df;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 5.5%;
+    left: 20%;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  &__top {
+    width: 50%;
+    height: 5%;
+    background: #d1e1df;
+    position: absolute;
+    bottom: 85.5%;
+    left: 25%;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  &__bottom {
+    width: 50%;
+    height: 1%;
+    background: #d1e1df;
+    position: absolute;
+    bottom: 4.5%;
+    left: 25%;
+    opacity: 0.7;
+  }
+  &__dirt {
+    width: 60%;
+    height: 5%;
+    background: #3a241d;
+    position: absolute;
+    border-radius: 0 0 1rem 1rem;
+    bottom: 5.5%;
+    left: 20%;
+    opacity: 0.7;
+    z-index: -1;
+  }
 }
